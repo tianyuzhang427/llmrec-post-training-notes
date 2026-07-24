@@ -46,6 +46,12 @@ ALLOWED_REAL_JSONL = {
         "sha256": "55c40c214f10830e650800927acc87f68abf324618f1ec7fd83285524e1f4b4b",
     }
 }
+ALLOWED_BINARY_ASSETS = {
+    Path("assets/hard-sample-budget.png"): {
+        "bytes": 56822,
+        "sha256": "4d85e6995c08ff551b2f74dcefa8080eefc833f540189bac8bc7debbb96a5af5",
+    }
+}
 
 
 def iter_files() -> list[Path]:
@@ -73,6 +79,16 @@ def main() -> int:
             errors.append(f"forbidden artifact: {relative}")
         if path.stat().st_size > MAX_FILE_BYTES:
             errors.append(f"file exceeds 2 MiB: {relative}")
+
+        expected_binary = ALLOWED_BINARY_ASSETS.get(relative)
+        if expected_binary is not None:
+            payload = path.read_bytes()
+            if len(payload) != expected_binary["bytes"]:
+                errors.append(f"allowlisted binary size mismatch: {relative}")
+            if hashlib.sha256(payload).hexdigest() != expected_binary["sha256"]:
+                errors.append(f"allowlisted binary checksum mismatch: {relative}")
+            continue
+
         if path.suffix.lower() == ".jsonl" and path.name != "example.jsonl":
             expected = ALLOWED_REAL_JSONL.get(relative)
             if expected is None:
