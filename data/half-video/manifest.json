@@ -15,8 +15,49 @@
     "ad": 1576,
     "living": 1271
   },
+  "selection": {
+    "seed": 20260719,
+    "video_retention": 0.5,
+    "hard_coverage": [
+      "history",
+      "target_a",
+      "target_lv3",
+      "cluster_topic",
+      "target_topic",
+      "cluster",
+      "behavior",
+      "system",
+      "instruction",
+      "length_bucket"
+    ],
+    "fill_stratum": "history_cluster x target_topic",
+    "fill_priority": [
+      "new target_a_target_b",
+      "new full_sid",
+      "lower history repetition",
+      "lower target_a frequency"
+    ]
+  },
+  "training_budget": {
+    "recommendation_supervised_tokens_before": 13059178,
+    "recommendation_supervised_tokens_after": 8016833,
+    "video_supervised_tokens_before": 10068437,
+    "video_supervised_tokens_after": 5026092,
+    "video_share_before": 0.7709855091951423,
+    "video_share_after": 0.6269423349594534
+  },
+  "file_size": {
+    "jsonl_bytes": 217913855,
+    "gzip_bytes": 35813107
+  },
   "retained_rows_rewritten": 0,
-  "status": "candidate_without_isolated_online_control",
+  "validation": {
+    "nonvideo_unchanged": true,
+    "retained_lines_byte_exact": true,
+    "hard_diversity_dimensions_full_coverage": true,
+    "video_token_retention": 0.4991928737300536
+  },
+  "status": "validated_in_later_high_score_recipe",
   "public_payload": {
     "real_rows": 0,
     "synthetic_examples": 1
