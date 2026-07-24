@@ -1,8 +1,21 @@
 {
+  "display_name": "Caption2Token",
   "asset_id": "r0_c2t_mixed_seed_unseen_prefix_sa_rebalanced_onereason_v1",
   "task_family": "caption_to_itemic_token",
+  "source_clean_pool": {
+    "asset_id": "r0_c2t_mixed_clean_v1",
+    "available_rows": 11689
+  },
   "rows": 4742,
-  "selection_rule": "seed-unseen prefix_s_a only; strict OneReason domain ratio",
+  "bytes": 3803473,
+  "gzip_bytes": 1099124,
+  "sha256": "e10f784107575aeb2aa0edae4244ecdf69fa14f7dfe1387c40b1eafee3535dd4",
+  "token_shape": "<|domain_begin|><s_a_x><s_b_y><s_c_z>",
+  "selection": {
+    "rule": "keep seed-unseen prefix_s_a; match OneReason domain ratio; maximize prefix_s_a coverage before adding extra rows",
+    "prefix_s_a_definition": "domain marker plus first semantic code",
+    "prefix_ab_definition": "domain marker plus first and second semantic codes"
+  },
   "domain_counts": {
     "ad": 1181,
     "living": 952,
@@ -13,12 +26,38 @@
     "no_think": 2479,
     "think": 2263
   },
+  "domain_mode_counts": {
+    "ad": {
+      "think": 577,
+      "no_think": 604
+    },
+    "living": {
+      "think": 498,
+      "no_think": 454
+    },
+    "prod": {
+      "think": 560,
+      "no_think": 658
+    },
+    "video": {
+      "think": 628,
+      "no_think": 763
+    }
+  },
   "unique_counts": {
     "full_token": 4742,
     "prefix_ab": 4550,
     "prefix_s_a": 3018
   },
-  "status": "historical_training_component_candidate_signal",
+  "status": "validated_training_component_single_observation",
+  "online_observation": {
+    "direct_parent_total": 0.9186,
+    "result_total": 0.9263,
+    "total_delta": 0.0077,
+    "direct_parent_understanding_world": 0.1361,
+    "result_understanding_world": 0.142,
+    "boundary": "single positive observation; not repeatedly validated"
+  },
   "public_payload": {
     "real_rows": 0,
     "synthetic_examples": 1

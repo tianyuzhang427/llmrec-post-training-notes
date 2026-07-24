@@ -1,28 +1,80 @@
 {
   "asset_group": "understanding_world_math",
   "task_family": "math_multiple_choice_letter",
+  "response_shape": "empty_think_plus_single_letter",
   "assets": [
     {
+      "display_name": "Math23K",
       "asset_id": "understanding_world_math23k_letter_no_think",
-      "source": "Math23K; obtain from the original provider",
+      "source": "Azure99/math23k-reborn",
       "rows": 21799,
-      "status": "historical_training_component"
+      "bytes": 8425257,
+      "gzip_bytes": 1428869,
+      "sha256": "52b8612e2beacfcf2ff448d2c2784b0e35dcde8feda2751fcb987d8e7c87f655",
+      "unique_prompts": 21799,
+      "supervised_label_tokens": 152593,
+      "input_tokens": 2560470,
+      "packed_microbatches_32k": 80,
+      "answer_counts": {
+        "A": 5521,
+        "B": 5528,
+        "C": 5298,
+        "D": 5452
+      },
+      "status": "validated_training_component",
+      "online_observation": {
+        "metric": "understanding_world",
+        "parent": 0.1357,
+        "result": 0.1487
+      }
     },
     {
+      "display_name": "Math Plus",
       "asset_id": "math_diversity_delta_matched_v1",
-      "source_families": [
-        "APE210K",
-        "GSM8K-zh",
-        "Orca Math",
-        "DeepMind Mathematics",
-        "MathQA",
-        "program-verified local generators"
-      ],
       "rows": 21799,
-      "status": "locally_validated_no_online_single_variable_result"
+      "bytes": 8442468,
+      "gzip_bytes": 1501187,
+      "sha256": "1e39be2e728f5a4ac3267959a5222709cffaaf3a42a4978fbd466a2703624990",
+      "source_quotas": {
+        "APE210K": 6540,
+        "GSM8K-zh": 3924,
+        "Orca Math": 3706,
+        "DeepMind Mathematics": 4360,
+        "locally generated table math": 2180,
+        "MathQA": 771,
+        "locally generated verified puzzle": 318
+      },
+      "licenses": {
+        "APE210K": "MIT",
+        "GSM8K-zh": "MIT",
+        "Orca Math": "MIT",
+        "DeepMind Mathematics": "Apache-2.0",
+        "locally generated table math": "locally generated",
+        "MathQA": "Apache-2.0",
+        "locally generated verified puzzle": "locally generated"
+      },
+      "budget_matching": {
+        "supervised_label_tokens": 152593,
+        "input_tokens": 2544422,
+        "input_token_ratio_to_math23k": 0.9937324006920605,
+        "packed_microbatches_32k": 80,
+        "answer_distribution_matches_math23k": true
+      },
+      "validation": {
+        "valid": true,
+        "exact_duplicate_groups": 0,
+        "exact_overlap_with_math23k": 0,
+        "max_digit_normalized_template_group": 109
+      },
+      "status": "validated_direction_in_online_recipe",
+      "online_observation": {
+        "metric": "understanding_world",
+        "parent": 0.1487,
+        "result": 0.161,
+        "boundary": "multi-factor recipe; not a single-variable delta"
+      }
     }
   ],
-  "response_shape": "empty_think_plus_single_letter",
   "public_payload": {
     "real_rows": 0,
     "synthetic_examples": 2

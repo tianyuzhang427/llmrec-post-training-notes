@@ -13,8 +13,8 @@ LogicChain → ActionSelect 额外提供独立构建代码；ActionSelect 额外
 | 数据资产 | 正式版本 | 规模 | 样例 / 数据 |
 | --- | --- | ---: | --- |
 | [CEval-Letter](ceval-letter/README.md) | `understanding_world_ceval_letter_no_think` | 13,948 | [在数据卡中查看](ceval-letter/README.md#合成样例) |
-| [懂世界 Math](math/README.md) | Math23K letter-only + Math Diversity Delta | 21,799 + 21,799 | [在数据卡中查看](math/README.md#合成样例) |
+| [懂世界 Math](math/README.md) | Math23K + Math Plus | 21,799 + 21,799 | [构建、来源与样例](math/README.md) |
 | [Half Video](half-video/README.md) | `seed_recommend_video_diverse_half_v1` | 19,204 → 11,770 | [在数据卡中查看](half-video/README.md#合成样例) |
 | [LogicChain → ActionSelect](logicchain-to-actionselect/README.md) | `logicchain_to_action_select_direct_v0` | 1,298 | [提取方法与代码](logicchain-to-actionselect/README.md#怎么提取) |
 | [自构造 ActionSelect](actionselect/README.md) | `user_history_r2_action_select_refined_104_v5` | 104 | [完整 JSONL](actionselect/actionselect_104.jsonl) |
-| [C2T-SA 小包](c2t-sa/README.md) | `r0_c2t_mixed_seed_unseen_prefix_sa_rebalanced_onereason_v1` | 4,742 | [在数据卡中查看](c2t-sa/README.md#合成样例) |
+| [Caption2Token](c2t-sa/README.md) | `r0_c2t_mixed_seed_unseen_prefix_sa_rebalanced_onereason_v1` | 4,742 | [筛选方法、统计与样例](c2t-sa/README.md) |
