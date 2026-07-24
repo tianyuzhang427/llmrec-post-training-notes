@@ -12,5 +12,15 @@
 
 该数据对应清楚的早期整体正观测，但懂世界单项基本持平，不能解释为世界知识的独立提升。
 
+## 合成样例
+
+```json
+{
+  "system": "请直接遵循指示作答。",
+  "prompt": "请回答以下选择题：\n[合成题干]\nA. [选项一]\nB. [选项二]\nC. [选项三]\nD. [选项四]\n/no_think",
+  "response": "<think>\n</think>\nB"
+}
+```
+
 - [公开 manifest](manifest.json)
-- [合成结构样例](example.jsonl)
+- [原始 example.jsonl](example.jsonl)

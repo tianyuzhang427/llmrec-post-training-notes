@@ -12,5 +12,15 @@
 
 50% 版本进入了后期高分配方；继续降到 35% 后覆盖和线上效果变弱。由于缺少单变量线上对照，不能独立声称 Half Video 带来提分。
 
+## 合成样例
+
+```json
+{
+  "system": "[合成推荐任务指令]",
+  "prompt": "【用户历史】[合成的跨域交互序列]\n【目标域】短视频",
+  "response": "<|video_begin|><s_a_1><s_b_2><s_c_3>"
+}
+```
+
 - [公开 manifest](manifest.json)
-- [合成结构样例](example.jsonl)
+- [原始 example.jsonl](example.jsonl)

@@ -12,5 +12,15 @@
 
 该小包对应 `CEval-Letter + C2T` 主线中的 `+0.0077` 候选信号；变化较小且未重复验证，不写成稳定因果结论。
 
+## 合成样例
+
+```json
+{
+  "system": "根据物料描述生成匹配的 itemic token。",
+  "prompt": "请根据以下短视频描述生成对应 token：[合成且不对应真实物料的描述]/no_think",
+  "response": "<think>\n</think>\n<|video_begin|><s_a_1><s_b_2><s_c_3>"
+}
+```
+
 - [公开 manifest](manifest.json)
-- [合成结构样例](example.jsonl)
+- [原始 example.jsonl](example.jsonl)

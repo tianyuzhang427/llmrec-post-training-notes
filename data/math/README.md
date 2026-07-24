@@ -11,5 +11,15 @@
 
 `B0_Math` 总分曾达到 `0.9573`，但完整训练 lineage 不足，不能把全部变化归因于 Math23K；Delta 也不能写成已经线上涨分。
 
+## 合成样例
+
+```json
+{
+  "system": "请直接遵循指示作答。",
+  "prompt": "请回答以下选择题：\n小明有 3 个盒子，每个盒子放 4 个合成示例球，共有多少个球？\nA. 7\nB. 10\nC. 12\nD. 14\n/no_think",
+  "response": "<think>\n</think>\nC"
+}
+```
+
 - [公开 manifest](manifest.json)
-- [合成结构样例](example.jsonl)
+- [原始 example.jsonl](example.jsonl)

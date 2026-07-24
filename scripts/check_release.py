@@ -85,7 +85,8 @@ def main() -> int:
             for target in MARKDOWN_LINK.findall(text):
                 if "://" in target or target.startswith("#"):
                     continue
-                resolved = (path.parent / target).resolve()
+                target_path = target.split("#", 1)[0]
+                resolved = (path.parent / target_path).resolve()
                 if not resolved.exists() or ROOT not in resolved.parents:
                     errors.append(f"broken or external local link in {relative}: {target}")
 

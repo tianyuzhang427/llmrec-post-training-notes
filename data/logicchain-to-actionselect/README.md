@@ -12,5 +12,15 @@
 
 LogicChain event 只标记核心演化证据，不能保证覆盖所有主题相关历史，因此该资产不是 FullRecall ActionSelect gold，只能作为低召回弱标签消融。
 
+## 合成样例
+
+```json
+{
+  "system": "",
+  "prompt": "【用户交互历史】[合成历史]\n【兴趣主题】[合成主题]\n请选择相关历史条目/no_think",
+  "response": "<think>\n</think>\n[\"<|video_begin|><s_a_1><s_b_2><s_c_3>\"]"
+}
+```
+
 - [公开 manifest](manifest.json)
-- [合成结构样例](example.jsonl)
+- [原始 example.jsonl](example.jsonl)

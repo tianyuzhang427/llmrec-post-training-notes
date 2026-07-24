@@ -24,25 +24,25 @@
 
 | 主线 | 规模 | 样例 | 证据边界 |
 | --- | ---: | --- | --- |
-| [CEval-Letter](data/ceval-letter/README.md) | 13,948 | [查看 JSONL](data/ceval-letter/example.jsonl) | 有清楚的早期整体正观测，但不是懂世界单项提升。 |
-| [懂世界 Math](data/math/README.md) | 21,799 + 21,799 | [查看 JSONL](data/math/example.jsonl) | Math23K 与 Math Plus 两层数据均经过验证，有利于提升懂世界。 |
-| [Half Video](data/half-video/README.md) | 19,204 → 11,770 | [查看 JSONL](data/half-video/example.jsonl) | 只减半视频行；缺少隔离因果对照。 |
-| [LogicChain → ActionSelect](data/logicchain-to-actionselect/README.md) | 1,298 | [查看 JSONL](data/logicchain-to-actionselect/example.jsonl) | 增加 ActionSelect 样本有利于缓解复读问题。 |
-| [ActionSelect](data/actionselect/README.md) | 104 | [查看 JSONL](data/actionselect/example.jsonl) | 104 条精心构建的 ActionSelect 数据带来小幅提升。 |
-| [C2T-SA](data/c2t-sa/README.md) | 4,742 | [查看 JSONL](data/c2t-sa/example.jsonl) | seed-unseen `prefix_s_a` + OneReason 域比例重平衡。 |
+| [CEval-Letter](data/ceval-letter/README.md) | 13,948 | [查看样例](data/ceval-letter/README.md#合成样例) | 有清楚的早期整体正观测，但不是懂世界单项提升。 |
+| [懂世界 Math](data/math/README.md) | 21,799 + 21,799 | [查看样例](data/math/README.md#合成样例) | Math23K 与 Math Plus 两层数据均经过验证，有利于提升懂世界。 |
+| [Half Video](data/half-video/README.md) | 19,204 → 11,770 | [查看样例](data/half-video/README.md#合成样例) | 只减半视频行；缺少隔离因果对照。 |
+| [LogicChain → ActionSelect](data/logicchain-to-actionselect/README.md) | 1,298 | [查看样例](data/logicchain-to-actionselect/README.md#合成样例) | 增加 ActionSelect 样本有利于缓解复读问题。 |
+| [ActionSelect](data/actionselect/README.md) | 104 | [查看样例](data/actionselect/README.md#合成样例) | 104 条精心构建的 ActionSelect 数据带来小幅提升。 |
+| [C2T-SA](data/c2t-sa/README.md) | 4,742 | [查看样例](data/c2t-sa/README.md#合成样例) | seed-unseen `prefix_s_a` + OneReason 域比例重平衡。 |
 
 ### 样例速览
 
 以下均为合成样例，只展示任务结构，不对应比赛或第三方真实数据：
 
-- **CEval-Letter**：`[合成题干] + A/B/C/D` → 空 `<think>` + 单字母答案 `B`
-- **懂世界 Math**：`3 个盒子 × 每盒 4 个球` → 空 `<think>` + 单字母答案 `C`
-- **Half Video**：`[跨域用户历史] + 目标域：短视频` → 一个视频 itemic token
-- **LogicChain → ActionSelect**：`[用户历史] + [兴趣主题]` → 一个从历史中复制的 itemic token 列表
-- **ActionSelect**：`[用户历史] + [目标兴趣]` → 多个从历史中复制的 itemic token
-- **C2T-SA**：`[合成短视频描述]` → 一个匹配描述的视频 itemic token
+- **[CEval-Letter](data/ceval-letter/README.md#合成样例)**：`[合成题干] + A/B/C/D` → 空 `<think>` + 单字母答案 `B`
+- **[懂世界 Math](data/math/README.md#合成样例)**：`3 个盒子 × 每盒 4 个球` → 空 `<think>` + 单字母答案 `C`
+- **[Half Video](data/half-video/README.md#合成样例)**：`[跨域用户历史] + 目标域：短视频` → 一个视频 itemic token
+- **[LogicChain → ActionSelect](data/logicchain-to-actionselect/README.md#合成样例)**：`[用户历史] + [兴趣主题]` → 一个从历史中复制的 itemic token 列表
+- **[ActionSelect](data/actionselect/README.md#合成样例)**：`[用户历史] + [目标兴趣]` → 多个从历史中复制的 itemic token
+- **[C2T-SA](data/c2t-sa/README.md#合成样例)**：`[合成短视频描述]` → 一个匹配描述的视频 itemic token
 
-字段级内容可直接点击上表中的 **查看 JSONL**；数据来源、构造方式和证据边界保留在各自的数据卡中。
+点击名称或上表中的 **查看样例**，即可在对应数据卡中阅读完整字段；数据卡末尾仍保留原始 JSONL。
 
 ## 五个仍待验证的方向
 
