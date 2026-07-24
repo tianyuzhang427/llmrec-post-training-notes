@@ -5,17 +5,8 @@
     {
       "asset_id": "user_history_r2_action_select_refined_104_v5",
       "rows": 104,
-      "status": "audit_only_pending_manual_review"
-    },
-    {
-      "asset_id": "user_history_r2_action_select_action918_v1",
-      "rows": 918,
-      "composition": {
-        "judged_anchor": 104,
-        "strict_scale_extension": 814
-      },
-      "status": "audit_only_pending_manual_review",
-      "training_authorized": false
+      "status": "validated_training_component",
+      "observed_effect": "small positive gain"
     }
   ],
   "known_inference_issue": "tail SID repetition, two-SID loops, or delayed JSON-array closure",

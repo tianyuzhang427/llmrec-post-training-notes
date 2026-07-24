@@ -28,7 +28,7 @@
 | [懂世界 Math](data/math/README.md) | 21,799 + 21,799 | [查看 JSONL](data/math/example.jsonl) | Math23K 与 Math Plus 两层数据均经过验证，有利于提升懂世界。 |
 | [Half Video](data/half-video/README.md) | 19,204 → 11,770 | [查看 JSONL](data/half-video/example.jsonl) | 只减半视频行；缺少隔离因果对照。 |
 | [LogicChain → ActionSelect](data/logicchain-to-actionselect/README.md) | 1,298 | [查看 JSONL](data/logicchain-to-actionselect/example.jsonl) | 增加 ActionSelect 样本有利于缓解复读问题。 |
-| [ActionSelect](data/actionselect/README.md) | 104 / 918 | [查看 JSONL](data/actionselect/example.jsonl) | Action100 有一轮正观测；918 条仍待人工语义审核。 |
+| [ActionSelect](data/actionselect/README.md) | 104 | [查看 JSONL](data/actionselect/example.jsonl) | 104 条精心构建的 ActionSelect 数据带来小幅提升。 |
 | [C2T-SA](data/c2t-sa/README.md) | 4,742 | [查看 JSONL](data/c2t-sa/example.jsonl) | seed-unseen `prefix_s_a` + OneReason 域比例重平衡。 |
 
 ### 样例速览
