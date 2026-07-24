@@ -10,6 +10,13 @@
       "file": "actionselect_104.jsonl",
       "bytes": 1806802,
       "sha256": "55c40c214f10830e650800927acc87f68abf324618f1ec7fd83285524e1f4b4b",
+      "provenance": {
+        "upstream_source": "competition-official seed dataset",
+        "upstream_scope": "user-history records",
+        "derivation": "topic extraction, Teacher/Judge filtering, and chronological itemic-token copying from selected visible history events",
+        "is_official_actionselect_gold": false,
+        "reuse_notice": "attribute both the competition-official seed dataset and this repository; follow the original competition and upstream-data terms"
+      },
       "lineage": {
         "strict_long_chain_rows": 103,
         "teacher_high_judge_accept_high_short_chain_rows": 1,

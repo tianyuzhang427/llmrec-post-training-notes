@@ -1,6 +1,6 @@
 # 数据资产
 
-本目录维护六类数据资产的说明。除 `actionselect/actionselect_104.jsonl` 外，其余目录不包含比赛或第三方真实数据行。
+本目录维护六类数据资产的说明。除从比赛官方 seed 用户历史派生的 `actionselect/actionselect_104.jsonl` 外，其余目录不包含比赛或第三方真实数据行。
 
 每个子目录至少包含三个文件：
 

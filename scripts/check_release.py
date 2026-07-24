@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the controlled research package and its single allowlisted data file."""
+"""Check the controlled public research package and its allowlisted artifacts."""
 
 from __future__ import annotations
 
