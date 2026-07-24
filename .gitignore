@@ -5,9 +5,10 @@
 __pycache__/
 *.py[cod]
 
-# Only synthetic examples may be tracked under data.
+# Only the explicitly reviewed ActionSelect 104 file and synthetic examples may be tracked.
 data/**/*.jsonl
 !data/**/example.jsonl
+!data/actionselect/actionselect_104.jsonl
 
 # Local models and generated artifacts.
 models/

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Check that the minimal public package contains no obvious private artifacts."""
+"""Check the controlled research package and its single allowlisted data file."""
 
 from __future__ import annotations
 
+import hashlib
 import re
 import sys
 from pathlib import Path
@@ -39,6 +40,12 @@ SECRET_PATTERNS = {
 LOCAL_HOME = re.compile(r"(?<![A-Za-z0-9_])/(?:Users|home)/[^/\s]+/")
 MARKDOWN_LINK = re.compile(r"!?\[[^\]]*]\(([^)]+)\)")
 MAX_FILE_BYTES = 2 * 1024 * 1024
+ALLOWED_REAL_JSONL = {
+    Path("data/actionselect/actionselect_104.jsonl"): {
+        "rows": 104,
+        "sha256": "55c40c214f10830e650800927acc87f68abf324618f1ec7fd83285524e1f4b4b",
+    }
+}
 
 
 def iter_files() -> list[Path]:
@@ -67,7 +74,20 @@ def main() -> int:
         if path.stat().st_size > MAX_FILE_BYTES:
             errors.append(f"file exceeds 2 MiB: {relative}")
         if path.suffix.lower() == ".jsonl" and path.name != "example.jsonl":
-            errors.append(f"non-example JSONL is not allowed: {relative}")
+            expected = ALLOWED_REAL_JSONL.get(relative)
+            if expected is None:
+                errors.append(f"non-allowlisted JSONL is not allowed: {relative}")
+            else:
+                payload = path.read_bytes()
+                row_count = sum(bool(line.strip()) for line in payload.splitlines())
+                sha256 = hashlib.sha256(payload).hexdigest()
+                if row_count != expected["rows"]:
+                    errors.append(
+                        f"allowlisted JSONL row mismatch: {relative}: "
+                        f"{row_count} != {expected['rows']}"
+                    )
+                if sha256 != expected["sha256"]:
+                    errors.append(f"allowlisted JSONL checksum mismatch: {relative}")
 
         try:
             text = path.read_text(encoding="utf-8")
@@ -96,7 +116,10 @@ def main() -> int:
             print(f"- {error}")
         return 1
 
-    print(f"Release check passed: {len(files)} files, no private data artifacts found.")
+    print(
+        f"Release check passed: {len(files)} files; "
+        f"{len(ALLOWED_REAL_JSONL)} controlled data artifact verified."
+    )
     return 0
 
 

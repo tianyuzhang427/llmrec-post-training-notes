@@ -3,9 +3,26 @@
   "task_family": "action_select_weak_label_projection",
   "source_logicchain_rows": 1304,
   "output_rows": 1298,
+  "rejected_without_itemic_token": 6,
+  "raw_projected_token_occurrences": 4037,
   "projected_label_occurrences": 3939,
+  "duplicate_token_occurrences_removed": 98,
+  "globally_unique_labels": 3855,
+  "extraction": {
+    "topic": "logic_chain.name",
+    "labels": "stable unique itemic tokens from logic_chain.events[*].action",
+    "history": "copied unchanged from source prompt",
+    "response": "empty think plus JSON string array",
+    "tokenless_rows": "rejected without recovery"
+  },
+  "validation": {
+    "all_labels_copied_from_visible_history": true,
+    "all_output_labels_unique_per_row": true,
+    "exact_duplicate_prompt_response_pairs": 0
+  },
   "label_contract": "every output token must be copied verbatim from visible history",
   "status": "low_recall_weak_label_ablation",
+  "code": "build.py",
   "public_payload": {
     "real_rows": 0,
     "synthetic_examples": 1

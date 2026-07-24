@@ -18,7 +18,7 @@
 
 ## 六类数据资产
 
-每个目录只包含数据卡、公开 manifest 和一条合成样例。
+每个目录均包含数据卡、manifest 和合成样例；LogicChain → ActionSelect 额外提供构建代码，ActionSelect 额外提供完整的 104 条 JSONL。
 
 | 主线 | 规模 | 样例 | 证据边界 |
 | --- | ---: | --- | --- |

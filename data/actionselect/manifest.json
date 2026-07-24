@@ -6,12 +6,34 @@
       "asset_id": "user_history_r2_action_select_refined_104_v5",
       "rows": 104,
       "status": "validated_training_component",
-      "observed_effect": "small positive gain"
+      "observed_effect": "small positive gain",
+      "file": "actionselect_104.jsonl",
+      "bytes": 1806802,
+      "sha256": "55c40c214f10830e650800927acc87f68abf324618f1ec7fd83285524e1f4b4b",
+      "lineage": {
+        "strict_long_chain_rows": 103,
+        "teacher_high_judge_accept_high_short_chain_rows": 1,
+        "all_blank_system": true,
+        "prompt_surface_variants": 4
+      },
+      "split": {
+        "train": 84,
+        "dev": 10,
+        "test_internal": 10
+      },
+      "validation": {
+        "json": true,
+        "token_legal": true,
+        "visible_history_copy": true,
+        "stable_unique_labels": true,
+        "chronological_order": true,
+        "no_think": true
+      }
     }
   ],
   "known_inference_issue": "tail SID repetition, two-SID loops, or delayed JSON-array closure",
   "public_payload": {
-    "real_rows": 0,
+    "real_rows": 104,
     "synthetic_examples": 1
   }
 }
