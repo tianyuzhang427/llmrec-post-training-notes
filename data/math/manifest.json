@@ -1,0 +1,30 @@
+{
+  "asset_group": "understanding_world_math",
+  "task_family": "math_multiple_choice_letter",
+  "assets": [
+    {
+      "asset_id": "understanding_world_math23k_letter_no_think",
+      "source": "Math23K; obtain from the original provider",
+      "rows": 21799,
+      "status": "historical_training_component"
+    },
+    {
+      "asset_id": "math_diversity_delta_matched_v1",
+      "source_families": [
+        "APE210K",
+        "GSM8K-zh",
+        "Orca Math",
+        "DeepMind Mathematics",
+        "MathQA",
+        "program-verified local generators"
+      ],
+      "rows": 21799,
+      "status": "locally_validated_no_online_single_variable_result"
+    }
+  ],
+  "response_shape": "empty_think_plus_single_letter",
+  "public_payload": {
+    "real_rows": 0,
+    "synthetic_examples": 2
+  }
+}

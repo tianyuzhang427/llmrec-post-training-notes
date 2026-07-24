@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" role="img" aria-labelledby="title desc">
+  <title id="title">官方 seed 本地 replay 的 optimizer-step 任务覆盖率</title>
+  <desc id="desc">Recommendation 覆盖 412 个 step，LogicChain 279 个，ActionSelect 241 个，Material C2T 60 个，Material T2C 40 个，总计 420 个 optimizer steps。</desc>
+  <style>
+    .title { font: 600 22px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2328; }
+    .sub { font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #656d76; }
+    .label { font: 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2328; }
+    .value { font: 600 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1f2328; text-anchor: end; }
+    .meta { font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #656d76; text-anchor: end; }
+    .bar-bg { fill: #d0d7de; }
+    .bar { fill: #2f81f7; }
+    .rule { stroke: #d8dee4; stroke-width: 1; }
+    @media (prefers-color-scheme: dark) {
+      .title, .label, .value { fill: #e6edf3; }
+      .sub, .meta { fill: #8b949e; }
+      .bar-bg { fill: #30363d; }
+      .bar { fill: #58a6ff; }
+      .rule { stroke: #30363d; }
+    }
+  </style>
+
+  <text class="title" x="20" y="30">Optimizer-step 任务覆盖（local replay）</text>
+  <text class="sub" x="20" y="55">官方 seed · 420 steps · 实色表示该任务在 step 中存在有效监督 token</text>
+
+  <text class="sub" x="810" y="80" text-anchor="end">覆盖率</text>
+  <text class="sub" x="950" y="80" text-anchor="end">最大连续缺席</text>
+  <line class="rule" x1="20" y1="87" x2="960" y2="87"/>
+
+  <text class="label" x="20" y="116">Recommendation</text>
+  <rect class="bar-bg" x="210" y="96" width="560" height="24" rx="4"/>
+  <rect class="bar" x="210" y="96" width="549" height="24" rx="4"/>
+  <text class="value" x="810" y="114">412 / 420 · 98.1%</text>
+  <text class="meta" x="950" y="114">1 step</text>
+
+  <text class="label" x="20" y="172">LogicChain</text>
+  <rect class="bar-bg" x="210" y="152" width="560" height="24" rx="4"/>
+  <rect class="bar" x="210" y="152" width="372" height="24" rx="4"/>
+  <text class="value" x="810" y="170">279 / 420 · 66.4%</text>
+  <text class="meta" x="950" y="170">4 steps</text>
+
+  <text class="label" x="20" y="228">ActionSelect</text>
+  <rect class="bar-bg" x="210" y="208" width="560" height="24" rx="4"/>
+  <rect class="bar" x="210" y="208" width="321" height="24" rx="4"/>
+  <text class="value" x="810" y="226">241 / 420 · 57.4%</text>
+  <text class="meta" x="950" y="226">6 steps</text>
+
+  <text class="label" x="20" y="284">Material C2T</text>
+  <rect class="bar-bg" x="210" y="264" width="560" height="24" rx="4"/>
+  <rect class="bar" x="210" y="264" width="80" height="24" rx="4"/>
+  <text class="value" x="810" y="282">60 / 420 · 14.3%</text>
+  <text class="meta" x="950" y="282">38 steps</text>
+
+  <text class="label" x="20" y="340">Material T2C</text>
+  <rect class="bar-bg" x="210" y="320" width="560" height="24" rx="4"/>
+  <rect class="bar" x="210" y="320" width="53" height="24" rx="4"/>
+  <text class="value" x="810" y="338">40 / 420 · 9.5%</text>
+  <text class="meta" x="950" y="338">49 steps</text>
+
+  <line class="rule" x1="20" y1="365" x2="960" y2="365"/>
+  <text class="sub" x="20" y="392">92 / 420 steps 只有 Recommendation；0 / 420 steps 全局监督为空</text>
+</svg>

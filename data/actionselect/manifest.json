@@ -1,0 +1,26 @@
+{
+  "asset_group": "self_constructed_action_select",
+  "task_family": "topic_conditioned_copy_from_history",
+  "assets": [
+    {
+      "asset_id": "user_history_r2_action_select_refined_104_v5",
+      "rows": 104,
+      "status": "audit_only_pending_manual_review"
+    },
+    {
+      "asset_id": "user_history_r2_action_select_action918_v1",
+      "rows": 918,
+      "composition": {
+        "judged_anchor": 104,
+        "strict_scale_extension": 814
+      },
+      "status": "audit_only_pending_manual_review",
+      "training_authorized": false
+    }
+  ],
+  "known_inference_issue": "tail SID repetition, two-SID loops, or delayed JSON-array closure",
+  "public_payload": {
+    "real_rows": 0,
+    "synthetic_examples": 1
+  }
+}

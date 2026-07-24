@@ -1,0 +1,19 @@
+{
+  "asset_id": "understanding_world_ceval_letter_no_think",
+  "display_name": "CEval-Letter",
+  "task_family": "multiple_choice_letter",
+  "source": "C-Eval; obtain from the original provider",
+  "rows": 13948,
+  "response_shape": "empty_think_plus_single_letter",
+  "answer_counts": {
+    "A": 3197,
+    "B": 3625,
+    "C": 3680,
+    "D": 3446
+  },
+  "status": "historical_training_component",
+  "public_payload": {
+    "real_rows": 0,
+    "synthetic_examples": 1
+  }
+}

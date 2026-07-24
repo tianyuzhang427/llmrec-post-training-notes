@@ -1,0 +1,2 @@
+[{"system":"请直接遵循指示作答。","prompt":"请回答以下选择题：\n小明有 3 个盒子，每个盒子放 4 个合成示例球，共有多少个球？\nA. 7\nB. 10\nC. 12\nD. 14\n/no_think","response":"<think>\n</think>\nC"}]
+[{"system":"请直接遵循指示作答。","prompt":"请根据合成表格回答问题：甲组 5 人、乙组 7 人，共有多少人？\nA. 10\nB. 11\nC. 12\nD. 13\n/no_think","response":"<think>\n</think>\nC"}]

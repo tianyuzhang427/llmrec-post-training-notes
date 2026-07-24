@@ -1,0 +1,1 @@
+[{"system":"根据物料描述生成匹配的 itemic token。","prompt":"请根据以下短视频描述生成对应 token：[合成且不对应真实物料的描述]/no_think","response":"<think>\n</think>\n<|video_begin|><s_a_1><s_b_2><s_c_3>"}]

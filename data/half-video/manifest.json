@@ -1,0 +1,24 @@
+{
+  "asset_id": "seed_recommend_video_diverse_half_v1",
+  "task_family": "recommendation_downsample",
+  "source_rows": 19204,
+  "output_rows": 11770,
+  "target_counts_before": {
+    "video": 14868,
+    "prod": 1489,
+    "ad": 1576,
+    "living": 1271
+  },
+  "target_counts_after": {
+    "video": 7434,
+    "prod": 1489,
+    "ad": 1576,
+    "living": 1271
+  },
+  "retained_rows_rewritten": 0,
+  "status": "candidate_without_isolated_online_control",
+  "public_payload": {
+    "real_rows": 0,
+    "synthetic_examples": 1
+  }
+}

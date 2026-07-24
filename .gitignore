@@ -1,0 +1,21 @@
+.DS_Store
+.env
+.env.*
+.venv/
+__pycache__/
+*.py[cod]
+
+# Only synthetic examples may be tracked under data.
+data/**/*.jsonl
+!data/**/example.jsonl
+
+# Local models and generated artifacts.
+models/
+outputs/
+reports/
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.parquet
+*.sqlite*

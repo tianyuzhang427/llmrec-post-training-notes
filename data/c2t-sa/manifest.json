@@ -1,0 +1,26 @@
+{
+  "asset_id": "r0_c2t_mixed_seed_unseen_prefix_sa_rebalanced_onereason_v1",
+  "task_family": "caption_to_itemic_token",
+  "rows": 4742,
+  "selection_rule": "seed-unseen prefix_s_a only; strict OneReason domain ratio",
+  "domain_counts": {
+    "ad": 1181,
+    "living": 952,
+    "prod": 1218,
+    "video": 1391
+  },
+  "mode_counts": {
+    "no_think": 2479,
+    "think": 2263
+  },
+  "unique_counts": {
+    "full_token": 4742,
+    "prefix_ab": 4550,
+    "prefix_s_a": 3018
+  },
+  "status": "historical_training_component_candidate_signal",
+  "public_payload": {
+    "real_rows": 0,
+    "synthetic_examples": 1
+  }
+}

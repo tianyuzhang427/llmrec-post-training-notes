@@ -1,0 +1,13 @@
+{
+  "asset_id": "logicchain_to_action_select_direct_v0",
+  "task_family": "action_select_weak_label_projection",
+  "source_logicchain_rows": 1304,
+  "output_rows": 1298,
+  "projected_label_occurrences": 3939,
+  "label_contract": "every output token must be copied verbatim from visible history",
+  "status": "low_recall_weak_label_ablation",
+  "public_payload": {
+    "real_rows": 0,
+    "synthetic_examples": 1
+  }
+}
