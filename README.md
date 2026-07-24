@@ -22,14 +22,27 @@
 
 仓库不分发比赛数据或第三方数据行。每个目录只包含数据卡、公开 manifest 和一条合成样例。
 
-| 主线 | 规模 | 证据边界 |
-| --- | ---: | --- |
-| [CEval-Letter](data/ceval-letter/README.md) | 13,948 | 有清楚的早期整体正观测，但不是懂世界单项提升。 |
-| [懂世界 Math](data/math/README.md) | 21,799 + 21,799 | Math23K 进入过训练；独立 Delta 只完成本地验证。 |
-| [Half Video](data/half-video/README.md) | 19,204 → 11,770 | 只减半视频行；缺少隔离因果对照。 |
-| [LogicChain → ActionSelect](data/logicchain-to-actionselect/README.md) | 1,298 | 低召回弱标签，不是 FullRecall gold。 |
-| [ActionSelect](data/actionselect/README.md) | 104 / 918 | Action100 有一轮正观测；918 条仍待人工语义审核。 |
-| [C2T-SA](data/c2t-sa/README.md) | 4,742 | seed-unseen `prefix_s_a` + OneReason 域比例重平衡。 |
+| 主线 | 规模 | 样例 | 证据边界 |
+| --- | ---: | --- | --- |
+| [CEval-Letter](data/ceval-letter/README.md) | 13,948 | [查看 JSONL](data/ceval-letter/example.jsonl) | 有清楚的早期整体正观测，但不是懂世界单项提升。 |
+| [懂世界 Math](data/math/README.md) | 21,799 + 21,799 | [查看 JSONL](data/math/example.jsonl) | Math23K 进入过训练；独立 Delta 只完成本地验证。 |
+| [Half Video](data/half-video/README.md) | 19,204 → 11,770 | [查看 JSONL](data/half-video/example.jsonl) | 只减半视频行；缺少隔离因果对照。 |
+| [LogicChain → ActionSelect](data/logicchain-to-actionselect/README.md) | 1,298 | [查看 JSONL](data/logicchain-to-actionselect/example.jsonl) | 低召回弱标签，不是 FullRecall gold。 |
+| [ActionSelect](data/actionselect/README.md) | 104 / 918 | [查看 JSONL](data/actionselect/example.jsonl) | Action100 有一轮正观测；918 条仍待人工语义审核。 |
+| [C2T-SA](data/c2t-sa/README.md) | 4,742 | [查看 JSONL](data/c2t-sa/example.jsonl) | seed-unseen `prefix_s_a` + OneReason 域比例重平衡。 |
+
+### 样例速览
+
+以下均为合成样例，只展示任务结构，不对应比赛或第三方真实数据：
+
+- **CEval-Letter**：`[合成题干] + A/B/C/D` → 空 `<think>` + 单字母答案 `B`
+- **懂世界 Math**：`3 个盒子 × 每盒 4 个球` → 空 `<think>` + 单字母答案 `C`
+- **Half Video**：`[跨域用户历史] + 目标域：短视频` → 一个视频 itemic token
+- **LogicChain → ActionSelect**：`[用户历史] + [兴趣主题]` → 一个从历史中复制的 itemic token 列表
+- **ActionSelect**：`[用户历史] + [目标兴趣]` → 多个从历史中复制的 itemic token
+- **C2T-SA**：`[合成短视频描述]` → 一个匹配描述的视频 itemic token
+
+字段级内容可直接点击上表中的 **查看 JSONL**；数据来源、构造方式和证据边界保留在各自的数据卡中。
 
 ## 五个仍待验证的方向
 
