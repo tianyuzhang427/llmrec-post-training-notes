@@ -54,7 +54,7 @@ Action100 重测子项：懂用户为 `0.0806、0.0356`；懂推荐为 `0.0768�
 
 ![官方 seed 本地 replay 的 optimizer-step 任务覆盖率](assets/optimizer-step-coverage.svg)
 
-在本地 replay 中，Recommendation 覆盖 `412/420` steps，ActionSelect 覆盖 `241/420`，LogicChain 覆盖 `279/420`，Material C2T 覆盖 `60/420`，Material T2C 覆盖 `40/420`。该 replay 并非平台的真实 batch trace，但它直观展示了任务间更新机会的不均衡：多数更新步骤由 Recommendation 主导，而 Caption2Token 等低频任务仅在少量步骤中获得监督。随着 shuffle 和 packing 发生变化，这些低频任务获得的有效更新次数也会随之改变，因此训练结果出现波动是符合直觉的。
+在本地 replay 中，Recommendation 覆盖 `412/420` steps，ActionSelect 覆盖 `241/420`，LogicChain 覆盖 `279/420`，Material C2T 覆盖 `60/420`，Material T2C 覆盖 `40/420`。该 replay 并非平台的真实 batch trace，但它直观展示了任务间更新机会的不均衡：多数更新步骤由 Recommendation 主导，而 Caption2Token 等低频任务仅在少量步骤中获得监督。随着 shuffle 和 packing 发生变化，这些低频任务获得的有效更新情况也会随之改变，因此训练结果出现波动是符合直觉的。
 
 ### ActionSelect 复读
 
